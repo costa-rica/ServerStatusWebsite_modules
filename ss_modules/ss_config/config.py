@@ -64,9 +64,10 @@ class ConfigLocal(ConfigBasic):
         self.SQL_URI_USERS = f"sqlite:///{self.DB_LOCAL_ROOT}{os.environ.get('DB_NAME_USERS')}"
         # # other directories
         self.DIR_DB_AUXILARY = os.path.join(self.DB_LOCAL_ROOT,"auxilary")
-        self.DIR_DB_AUX_IMAGES_PEOPLE = os.path.join(self.DIR_DB_AUXILARY,"images_people")
+        self.DIR_DB_AUX_IMAGES = os.path.join(self.DIR_DB_AUXILARY,"images")
         self.DIR_DB_AUX_BLOG = os.path.join(self.DIR_DB_AUXILARY,"blog")
         self.DIR_DB_AUX_BLOG_POSTS = os.path.join(self.DIR_DB_AUXILARY,"blog","posts")
+        self.LOCAL_TEST_DATA_PATH=os.environ.get('LOCAL_TEST_DATA_PATH')
 
     DEBUG = True
 
@@ -82,7 +83,7 @@ class ConfigDev(ConfigBasic):
         self.SQL_URI_BLS = f"sqlite:///{self.DB_DEV_ROOT}{os.environ.get('DB_NAME_BLS')}"
         # # other directories
         self.DIR_DB_AUXILARY = os.path.join(self.DB_DEV_ROOT,"auxilary")
-        self.DIR_DB_AUX_IMAGES_PEOPLE = os.path.join(self.DIR_DB_AUXILARY,"images_people")
+        self.DIR_DB_AUX_IMAGES = os.path.join(self.DIR_DB_AUXILARY,"images")
         self.DIR_DB_AUX_BLOG = os.path.join(self.DIR_DB_AUXILARY,"blog")
         self.DIR_DB_AUX_BLOG_POSTS = os.path.join(self.DIR_DB_AUXILARY,"blog","posts")
 
@@ -101,7 +102,7 @@ class ConfigProd(ConfigBasic):
         self.SQL_URI_BLS = f"sqlite:///{self.DB_PROD_ROOT}{os.environ.get('DB_NAME_BLS')}"
         # # other directories
         self.DIR_DB_AUXILARY = os.path.join(self.DB_PROD_ROOT,"auxilary")
-        self.DIR_DB_AUX_IMAGES_PEOPLE = os.path.join(self.DIR_DB_AUXILARY,"images_people")
+        self.DIR_DB_AUX_IMAGES = os.path.join(self.DIR_DB_AUXILARY,"images")
         self.DIR_DB_AUX_BLOG = os.path.join(self.DIR_DB_AUXILARY,"blog")
         self.DIR_DB_AUX_BLOG_POSTS = os.path.join(self.DIR_DB_AUXILARY,"blog","posts")
 
